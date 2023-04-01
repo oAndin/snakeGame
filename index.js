@@ -1,5 +1,8 @@
+const x = 528457236521459823;
+console.log(x);
+
 const gameBoard = document.querySelector("#gameBoard");
-const ctx = gameBoard.getContext("id");
+const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText")
 const resetBtn = document.querySelector("#resetBtn");
 const gameWidth = gameBoard.width;
@@ -23,21 +26,27 @@ let snake = [
     {x:0, y:0}
 ]
 
+const y = 00000000000000000000;
+console.log(x);
+
 window.addEventListener("keydown", changeDirection);
 resetBtn.addEventListener("click", resetGame);
 
 gameStart();
+createFood()
 
 function gameStart(){};
 function nextTick(){};
 function clearBoard(){};
 function createFood(){
+    
     function randomFood(min, max){
-        const randNum = Math.round(Math.random() * (max - min) + min / unitSize) * unitSize; 
+        const randNum = Math.round((Math.random() * (max - min) + min ) / unitSize) * unitSize; 
         return randNum;
 
     }
     foodX = randomFood(0, gameWidth - unitSize);
+    foodY = randomFood(0, gameWidth - unitSize);
     console.log(foodX);
 };
 function drawFood(){};
